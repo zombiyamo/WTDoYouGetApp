@@ -25,11 +25,14 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         //値が変わった時のイベントを登録
         bearDatePicker.addTarget(self, action: #selector(ViewController.onDidChangeDate(_:)), forControlEvents: .ValueChanged)
         
+        bearDatePicker.center = CGPointMake(self.view.bounds.width/2,self.view.bounds.height/2)
+        
         topLabel = UILabel(frame: CGRectMake(0,self.view.bounds.height/4,400,50))
         topLabel.text = "いつ起きるん？"
         topLabel.font = UIFont.boldSystemFontOfSize(20)
         topLabel.textColor = UIColor.brownColor()
         topLabel.textAlignment = NSTextAlignment.Center
+        topLabel.center = CGPointMake(self.view.bounds.width/2,self.view.bounds.height/4)
         
         answerLabel = UILabel(frame: CGRectMake(0,self.view.bounds.height-300,400,200))
         answerLabel.numberOfLines = 2
@@ -37,7 +40,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         answerLabel.font = UIFont.boldSystemFontOfSize(20)
         answerLabel.textColor = UIColor.brownColor()
         answerLabel.textAlignment = NSTextAlignment.Center
-        
+        answerLabel.center = CGPointMake(self.view.bounds.width/2, self.view.bounds.height-200)
         self.view.addSubview(bearDatePicker)
         self.view.addSubview(topLabel)
         self.view.addSubview(answerLabel)

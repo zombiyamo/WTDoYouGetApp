@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,11 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bear.png" translatesAutoresizingMaskIntoConstraints="NO" id="PnA-lg-3O2">
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bear.png" translatesAutoresizingMaskIntoConstraints="NO" id="PnA-lg-3O2">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PnA-lg-3O2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="MfN-fi-9kZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PnA-lg-3O2" secondAttribute="trailing" constant="-20" id="ZC9-qR-McB"/>
+                            <constraint firstItem="PnA-lg-3O2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="iwG-B2-43I"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PnA-lg-3O2" secondAttribute="bottom" id="ngD-0i-QbP"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
